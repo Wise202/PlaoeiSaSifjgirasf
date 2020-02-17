@@ -478,9 +478,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa300000
+      m_SelectedIDs: a82e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: b8f8ffffe8f9ffff2efaffff62faffff78fbffff
+      m_ExpandedIDs: 48faffff7cfaffffb0faffff78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -573,11 +573,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.050704345, y: 0.9418172, z: -0.165851, w: -0.2879351}
     speed: 2
-    m_Value: {x: -0.050455414, y: 0.94224626, z: -0.16592656, w: -0.28652152}
+    m_Value: {x: -0.05070425, y: 0.94181544, z: -0.16585068, w: -0.28793457}
   m_Size:
     m_Target: 10
     speed: 2
-    m_Value: 4.657884
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -738,14 +738,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\samsa\OneDrive\Documents\GitHub\The-Rat-Race\aVRatar
+  m_LastProjectPath: C:\Users\samsa\OneDrive\Documents\GitHub\aVRatar\aVRatar
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 382e0000
-    m_LastClickedID: 11832
-    m_ExpandedIDs: 00000000082d000000ca9a3b
+    m_SelectedIDs: b62d0000
+    m_LastClickedID: 11702
+    m_ExpandedIDs: 00000000882c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,7 +773,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000882c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
