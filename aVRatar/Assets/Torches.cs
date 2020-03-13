@@ -37,7 +37,7 @@ public class Torches : MonoBehaviour
         }
         if (lit[0] && lit[1] && lit[2] && lit[3])
         {
-            rb.AddForce(Vector3.up, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
             lit[0] = false;
         }
 
