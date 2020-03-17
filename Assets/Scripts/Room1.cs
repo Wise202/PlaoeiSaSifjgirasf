@@ -5,10 +5,14 @@ using UnityEngine;
 public class Room1 : MonoBehaviour
 {
     public bool[] litTorches;
+    bool mouseButtonDown;
+    public GameObject fB;
+    public Transform p;
 
     private void Update()
     {
         allTorchesLit();
+        SpawnFireBall();
     }
 
     void allTorchesLit() 
@@ -18,4 +22,20 @@ public class Room1 : MonoBehaviour
             
         }
     }
+
+    void SpawnFireBall() 
+    {
+        if (Input.GetMouseButtonDown(0) && mouseButtonDown == false) 
+        {
+            mouseButtonDown = true;
+            Instantiate(fB, p.position, Quaternion.identity);
+        }
+        if (Input.GetMouseButtonUp(0)) 
+        {
+            mouseButtonDown = false;
+        }
+    }
+
+
+
 }
