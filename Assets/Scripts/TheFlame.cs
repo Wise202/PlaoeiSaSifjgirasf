@@ -12,15 +12,15 @@ public class TheFlame : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("");
+
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name == "Fireball")
+        if (collision.gameObject.tag == "Fireball")
         {
-            Debug.Log("");
+            
             mR.material = orange;
         }
     }

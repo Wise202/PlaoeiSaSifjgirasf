@@ -40,6 +40,7 @@ public class Fire : MonoBehaviour
             {
                 //Instantiate(fireAnim, new Vector3(collision.transform.position.x, collision.transform.position.y + 1.5f, collision.transform.position.z + -0.5f), Quaternion.identity);
                 torches.lit[3] = true;
+                
             }
         
     }
