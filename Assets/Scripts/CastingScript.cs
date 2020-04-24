@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
 
 public class CastingScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //a reference to the action
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
 }
