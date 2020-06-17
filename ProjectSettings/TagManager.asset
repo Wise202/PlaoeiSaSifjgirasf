@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fireball
+  - projectile
+  - FxTemporaire
+  - Flame
   layers:
   - Default
   - TransparentFX
