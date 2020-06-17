@@ -9,7 +9,15 @@ public class CheckTorch : MonoBehaviour
     public int torch;
 
 
+    void Update()
+    {
+        if (onFire[0] && onFire[1] && onFire[2] && onFire[3])
+        {
+            print("11");
+        }
 
+        else { }
+    }
 
     
 }

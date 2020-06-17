@@ -42,7 +42,7 @@ public class Torch : MonoBehaviour
             
         }
 
-        if (col.gameObject.layer == 11)
+        if (col.gameObject.name == "Water")
         {
             switch (cT.torch)
             {
