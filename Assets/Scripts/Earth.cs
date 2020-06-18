@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Earth : MonoBehaviour
 {
-    float deathCount = 0.2f;
-    bool deathCheck;
+    float deathCount = 2f;
+    bool deathCheck = false;
 
     void Update()
     {
