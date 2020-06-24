@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Fireball
-  - projectile
-  - FxTemporaire
-  - Flame
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - Door
-  - Wall
-  - Fire(Burning)
-  - Water
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

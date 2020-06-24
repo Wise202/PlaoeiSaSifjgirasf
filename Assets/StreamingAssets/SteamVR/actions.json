@@ -50,14 +50,6 @@
       "type": "boolean"
     },
     {
-      "name": "/actions/default/in/FireSpawnThrow",
-      "type": "boolean"
-    },
-    {
-      "name": "/actions/default/in/Fireball",
-      "type": "boolean"
-    },
-    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -106,6 +98,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/Elementary",
       "usage": "single"
     }
   ],
