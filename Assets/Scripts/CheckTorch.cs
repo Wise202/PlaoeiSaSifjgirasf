@@ -11,13 +11,12 @@ public class CheckTorch : MonoBehaviour
     public Rigidbody rb;
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (onFire[0] && onFire[1] && onFire[2] && onFire[3])
         {
             rb.AddForce(transform.up * 1, ForceMode.Impulse);
         }
-        
     }
 
     

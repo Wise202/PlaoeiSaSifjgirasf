@@ -13,13 +13,17 @@ public class Torch : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Flame")
-        {
 
+        //Checks the game objects tag andif the torch is not burning will turn on flame
+        //and sets the Torch on count up by 1
+        if (col.gameObject.tag == "Flame")
+        {
+            
             switch (cT.torch)
             {
                 case 0:
                     cT.torch += 1;
+                    //changing the layer prevents torches from being lit twice 
                     this.gameObject.layer = 10;
                     cT.onFire[0] = true;
                     break;
@@ -42,12 +46,15 @@ public class Torch : MonoBehaviour
             
         }
 
-        if (col.gameObject.name == "Water")
+        if (col.gameObject.tag == "Water")
         {
+            //Checks the game objects tag and if the torch object is already burning will turn off flame
+            //and set the Torch on count down by 1
             switch (cT.torch)
             {
                 case 1:
                     cT.torch -= 1;
+                    //changing the layer prevents torches from being extinguished twice
                     this.gameObject.layer = 0;
                     cT.onFire[0] = false;
                     break;
