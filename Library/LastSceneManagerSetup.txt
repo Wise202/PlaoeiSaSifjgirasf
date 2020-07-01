@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Torch.unity
+- path: Assets/Scenes/SceneChange.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
