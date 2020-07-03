@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Earth.cs" />
     <Compile Include="Assets\Scripts\Fan.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\playerMovement.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\Torch.cs" />
