@@ -63,8 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FirstPersion AIO Pack\DemoScene\MiscScripts\Doors.cs" />
+    <Compile Include="Assets\FirstPersion AIO Pack\FirstPersonAIO\FirstPersonAIO.cs" />
     <Compile Include="Assets\Scripts\buttonScript.cs" />
     <Compile Include="Assets\Scripts\CastingScript.cs" />
+    <Compile Include="Assets\Scripts\CastingScript1.cs" />
     <Compile Include="Assets\Scripts\CheckTorch.cs" />
     <Compile Include="Assets\Scripts\Earth.cs" />
     <Compile Include="Assets\Scripts\Fan.cs" />
@@ -79,7 +82,9 @@
     <Compile Include="Assets\Scripts\WaterCatcher.cs" />
     <Compile Include="Assets\Scripts\WorldObjects.cs" />
     <None Include="Assets\Allegorithmic\Plugins\engine_build_info.txt" />
+    <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
     <None Include="Assets\Allegorithmic\Plugins\EULA.txt" />
+    <None Include="Assets\FirstPersion AIO Pack\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
