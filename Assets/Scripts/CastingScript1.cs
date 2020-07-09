@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class CastingScript1 : MonoBehaviour
 {
-    public Transform[] castingPoints;
+    public Transform fireBallPoint;
     public GameObject Fire;
-
-    float xRotation = 0f;
+    public Transform waterLaunchPoint;
+    public Rigidbody waterRB;
+    public GameObject water;
+    public float thrust;
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(1)) 
         {
-            Instantiate(Fire, castingPoints[0].position, Quaternion.identity);
+            Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
         }
-
-        float posY = Input.GetAxis("Mouse Y") * 100f * Time.deltaTime;
-
-        xRotation -= posY;
-        xRotation = Mathf.Clamp(xRotation, 0f, 0f);
-
+        if (Input.GetMouseButton(0)) 
+        {
+            thrust += Time.deltaTime;
+        }
+        if (Input.GetMouseButtonUp(0)) 
+        {
+           // waterRB.AddRelativeForce(Vector3.forward * thrust);
+        
+        }
+        
     }
 }
