@@ -6,9 +6,50 @@ using UnityEngine;
 public class LaunchRenderer : MonoBehaviour
 {
     LineRenderer lr;
+    [SerializeField]
+    private float velocityPrivate;
+    public float velocity
+    {
+        set
+        {
+            if (value < 0f)
+            {
+                velocityPrivate = 0f;
+            }
+            else if (value > 100f)
+            {
+                velocityPrivate = 100f;
+            }
+            else
+            {
+                velocityPrivate = value;
+            }
+        }
+        get { return velocityPrivate; }
+    }
 
-    public float velocity;
-    public float angle;
+    [SerializeField]
+    private float anglePrivate;
+    public float angle
+    {
+        set
+        {
+            if (value < 0f)
+            {
+                anglePrivate = 0f;
+            }
+            else if (value > 75f)
+            {
+                anglePrivate = 75f;
+            }
+            else
+            {
+                anglePrivate = value;
+            }
+        }
+        get { return anglePrivate; }
+    }
+
     public int resolution = 10;
 
     float g; //force of gravity on the y axis

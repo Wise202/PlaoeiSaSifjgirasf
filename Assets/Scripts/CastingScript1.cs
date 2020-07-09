@@ -7,25 +7,27 @@ public class CastingScript1 : MonoBehaviour
     public Transform fireBallPoint;
     public GameObject Fire;
     public Transform waterLaunchPoint;
-    public Rigidbody waterRB;
     public GameObject water;
     public float thrust;
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) 
+        if (Input.GetMouseButtonUp(1)) 
         {
             Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
         }
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            thrust = 0f;
+        }
         if (Input.GetMouseButton(0)) 
         {
-            thrust += Time.deltaTime;
+            thrust += Time.deltaTime * 150;
         }
         if (Input.GetMouseButtonUp(0)) 
         {
-           // waterRB.AddRelativeForce(Vector3.forward * thrust);
-        
+            Instantiate(water, waterLaunchPoint.position, waterLaunchPoint.rotation);
         }
         
     }
