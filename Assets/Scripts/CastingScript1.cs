@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class CastingScript1 : MonoBehaviour
 {
@@ -8,7 +10,28 @@ public class CastingScript1 : MonoBehaviour
     public GameObject Fire;
     public Transform waterLaunchPoint;
     public GameObject water;
-    public float thrust;
+
+    [SerializeField]
+    private float privateThrust;
+    public float thrust 
+    {
+        set 
+        {
+            if (value < 0f)
+            {
+                privateThrust = 0f;
+            }
+            else if (value > 1200f)
+            {
+                privateThrust = 1200f;
+            }
+            else 
+            {
+                privateThrust = value;
+            }
+        }
+        get { return privateThrust; }
+    }
     
     // Update is called once per frame
     void Update()

@@ -10009,7 +10009,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7631256101024076030}
   serializedVersion: 6
-  lengthInSec: 0.05
+  lengthInSec: 10.08
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -14747,9 +14747,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e310f6b4340ce48ad25f7b2efd0325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire_Alpha: {fileID: 1433275442488470895}
+  fire_Additive: {fileID: 1433275443213101338}
+  light: {fileID: 8135334748249924771}
   rb: {fileID: 1038611059425185928}
   thrust: 750
-  timer: 5
+  pointLight: {fileID: 750827857163248987}
+  deathTimeOut: 5
 --- !u!54 &1038611059425185928
 Rigidbody:
   m_ObjectHideFlags: 0
