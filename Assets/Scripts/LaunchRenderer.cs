@@ -16,9 +16,9 @@ public class LaunchRenderer : MonoBehaviour
             {
                 velocityPrivate = 0f;
             }
-            else if (value > 100f)
+            else if (value > 90f)
             {
-                velocityPrivate = 100f;
+                velocityPrivate = 90f;
             }
             else
             {
@@ -38,9 +38,9 @@ public class LaunchRenderer : MonoBehaviour
             {
                 anglePrivate = 0f;
             }
-            else if (value > 75f)
+            else if (value > 85f)
             {
-                anglePrivate = 75f;
+                anglePrivate = 85f;
             }
             else
             {
@@ -62,21 +62,24 @@ public class LaunchRenderer : MonoBehaviour
         g = Mathf.Abs(Physics2D.gravity.y);
     }
 
+    private void Start()
+    {
+        RenderArc();
+    }
 
 
-  
     private void Update()
     {
         if (Input.GetMouseButton(0))
         {
             RenderArc();
-            angle += Time.deltaTime * 12;
-            velocity += Time.deltaTime * 8;
+            angle += Time.deltaTime * 75;
+            velocity += Time.deltaTime * 50;
         }
         if (Input.GetMouseButtonUp(0))
         {
-            angle = 0f;
-            velocity = 0f;
+            angle = 0.01f;
+            velocity = 0.01f;
             RenderArc();
         }
 

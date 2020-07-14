@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\StreamScript.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\Torch.cs" />
     <Compile Include="Assets\Scripts\VRTest.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\Water.cs" />
     <Compile Include="Assets\Scripts\WaterCatcher.cs" />
     <Compile Include="Assets\Scripts\WorldObjects.cs" />
+    <None Include="Assets\Stream.shader" />
     <None Include="Assets\Allegorithmic\Plugins\engine_build_info.txt" />
     <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
     <None Include="Assets\Allegorithmic\Plugins\EULA.txt" />

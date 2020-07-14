@@ -14733,8 +14733,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2246032, y: 2.6330397, z: 2.2238605}
-  m_Center: {x: -1.2599604, y: 1.0271904, z: -0.69036746}
+  m_Size: {x: 1.4586315, y: 1.6306788, z: 2.2238605}
+  m_Center: {x: -1.3848884, y: 0.8467566, z: -0.69036746}
 --- !u!114 &1865262164055803515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14750,10 +14750,11 @@ MonoBehaviour:
   fire_Alpha: {fileID: 1433275442488470895}
   fire_Additive: {fileID: 1433275443213101338}
   light: {fileID: 8135334748249924771}
+  bCol: {fileID: 245706654}
   rb: {fileID: 1038611059425185928}
   thrust: 750
-  pointLight: {fileID: 750827857163248987}
   deathTimeOut: 5
+  hitWithWater: 0
 --- !u!54 &1038611059425185928
 Rigidbody:
   m_ObjectHideFlags: 0

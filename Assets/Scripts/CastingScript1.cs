@@ -11,6 +11,8 @@ public class CastingScript1 : MonoBehaviour
     public Transform waterLaunchPoint;
     public GameObject water;
 
+    public FireBall fB;
+
     [SerializeField]
     private float privateThrust;
     public float thrust 
@@ -21,9 +23,9 @@ public class CastingScript1 : MonoBehaviour
             {
                 privateThrust = 0f;
             }
-            else if (value > 1200f)
+            else if (value > 90f)
             {
-                privateThrust = 1200f;
+                privateThrust = 90f;
             }
             else 
             {
@@ -32,10 +34,13 @@ public class CastingScript1 : MonoBehaviour
         }
         get { return privateThrust; }
     }
+
     
     // Update is called once per frame
     void Update()
     {
+
+        
         if (Input.GetMouseButtonUp(1)) 
         {
             Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
@@ -46,12 +51,35 @@ public class CastingScript1 : MonoBehaviour
         }
         if (Input.GetMouseButton(0)) 
         {
-            thrust += Time.deltaTime * 150;
+            
+            thrust += Time.deltaTime * 50;
+            RaycastVoid();
         }
         if (Input.GetMouseButtonUp(0)) 
         {
-            Instantiate(water, waterLaunchPoint.position, waterLaunchPoint.rotation);
+         //   Instantiate(water, waterLaunchPoint.position, waterLaunchPoint.rotation);
         }
         
+    }
+    public Color color;
+    void RaycastVoid() 
+    {
+
+        RaycastHit hit;
+
+        Debug.DrawRay(waterLaunchPoint.position, waterLaunchPoint.forward, color, thrust);
+        if (Physics.Raycast(waterLaunchPoint.position, waterLaunchPoint.forward, out hit, thrust))
+        {
+            Debug.Log(" dsa");
+
+
+            if (hit.collider.tag == "Flame")
+            {
+
+                fB = hit.collider.gameObject.GetComponent<FireBall>();
+                fB.hitWithWater = true;
+            }
+        }
+
     }
 }
