@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.elementarytest.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\SAE\\Documents\\GitHub\\ElementaryTest\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\SAE\\Documents\\GitHub\\PlaoeiSaSifjgirasf\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "ElementaryTest [Testing]"
