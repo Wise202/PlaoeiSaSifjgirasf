@@ -16,9 +16,9 @@ public class LaunchRenderer : MonoBehaviour
             {
                 velocityPrivate = 0f;
             }
-            else if (value > 90f)
+            else if (value > 80f)
             {
-                velocityPrivate = 90f;
+                velocityPrivate = 80f;
             }
             else
             {
@@ -73,7 +73,7 @@ public class LaunchRenderer : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             RenderArc();
-            angle += Time.deltaTime * 75;
+            angle += Time.deltaTime * 90;
             velocity += Time.deltaTime * 50;
         }
         if (Input.GetMouseButtonUp(0))

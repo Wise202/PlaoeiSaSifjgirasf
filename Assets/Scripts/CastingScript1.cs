@@ -15,7 +15,7 @@ public class CastingScript1 : MonoBehaviour
 
     [SerializeField]
     private float privateThrust;
-    public float thrust 
+    public float thrust
     {
         set 
         {
@@ -39,11 +39,10 @@ public class CastingScript1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
         if (Input.GetMouseButtonUp(1)) 
         {
             Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
+            thrust = 0f;
         }
         if (Input.GetMouseButtonDown(0)) 
         {
@@ -52,17 +51,17 @@ public class CastingScript1 : MonoBehaviour
         if (Input.GetMouseButton(0)) 
         {
             
-            thrust += Time.deltaTime * 50;
+            thrust += Time.deltaTime * 15;
             RaycastVoid();
         }
         if (Input.GetMouseButtonUp(0)) 
         {
-         //   Instantiate(water, waterLaunchPoint.position, waterLaunchPoint.rotation);
+            thrust = 0f;
         }
         
     }
     public Color color;
-    void RaycastVoid() 
+    void RaycastVoid()
     {
 
         RaycastHit hit;
@@ -72,6 +71,10 @@ public class CastingScript1 : MonoBehaviour
         {
             Debug.Log(" dsa");
 
+            if (hit.collider.tag == "double")
+            {
+                Debug.Log(" double");
+            }
 
             if (hit.collider.tag == "Flame")
             {
