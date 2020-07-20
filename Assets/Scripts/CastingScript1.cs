@@ -8,8 +8,11 @@ public class CastingScript1 : MonoBehaviour
 {
     public Transform fireBallPoint;
     public GameObject Fire;
-    public Transform waterLaunchPoint;
+    public GameObject waterLaunchPoint;
     public GameObject water;
+    public GameObject S;
+    public float speed;
+    public GameObject E;
 
     public FireBall fB;
 
@@ -34,46 +37,68 @@ public class CastingScript1 : MonoBehaviour
         }
         get { return privateThrust; }
     }
+    public Vector3 waterArcRotation;
+    private void Start()
+    {
+       // waterArcRotation = new Vector3(waterLaunchPoint.transform.eulerAngles.x, waterLaunchPoint.transform.eulerAngles.y, waterLaunchPoint.transform.eulerAngles.z);
+    }
 
-    
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(1)) 
+        Inputs();
+    }
+
+    void Inputs() 
+    {
+        if (Input.GetMouseButtonUp(1))
         {
             Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
             thrust = 0f;
         }
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
+            waterArcRotation = new Vector3(S.transform.eulerAngles.x, S.transform.eulerAngles.y, S.transform.eulerAngles.z);
             thrust = 0f;
+            waterLaunchPoint.transform.eulerAngles = waterArcRotation;
         }
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButton(0))
         {
-            
             thrust += Time.deltaTime * 15;
+
+           
+
+            Vector3 direction = E.transform.position - waterLaunchPoint.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            waterLaunchPoint.transform.rotation = Quaternion.Lerp(waterLaunchPoint.transform.rotation, rotation, speed * Time.deltaTime);
+
             RaycastVoid();
+
         }
-        if (Input.GetMouseButtonUp(0)) 
+        if (Input.GetMouseButtonUp(0))
         {
+            waterLaunchPoint.transform.eulerAngles = waterArcRotation;
             thrust = 0f;
         }
-        
     }
+
     public Color color;
     void RaycastVoid()
     {
 
         RaycastHit hit;
 
-        Debug.DrawRay(waterLaunchPoint.position, waterLaunchPoint.forward, color, thrust);
-        if (Physics.Raycast(waterLaunchPoint.position, waterLaunchPoint.forward, out hit, thrust))
+        Debug.DrawRay(waterLaunchPoint.transform.position, waterLaunchPoint.transform.forward, color, thrust);
+        if (Physics.Raycast(waterLaunchPoint.transform.position, waterLaunchPoint.transform.forward, out hit, thrust))
         {
-            Debug.Log(" dsa");
-
-            if (hit.collider.tag == "double")
+            if (hit.collider.tag == "Untagged")
             {
-                Debug.Log(" double");
+                Debug.Log(" Noor");
+            }
+            if (hit.collider.tag == "Floor")
+            {
+                Debug.Log(" Floor");
             }
 
             if (hit.collider.tag == "Flame")
