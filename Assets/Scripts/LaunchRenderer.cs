@@ -70,6 +70,8 @@ public class LaunchRenderer : MonoBehaviour
 
     private void Update()
     {
+
+        RenderArc();
         if (Input.GetMouseButton(0))
         {
             RenderArc();

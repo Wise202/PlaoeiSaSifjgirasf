@@ -71,12 +71,12 @@
     <Compile Include="Assets\Scripts\Fan.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\LaunchRenderer.cs" />
-    <Compile Include="Assets\Scripts\LineRendererTest.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\StreamScript.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\Torch.cs" />
+    <Compile Include="Assets\Scripts\TorchFlame.cs" />
     <Compile Include="Assets\Scripts\VRTest.cs" />
     <Compile Include="Assets\Scripts\VRTestController.cs" />
     <Compile Include="Assets\Scripts\Water.cs" />

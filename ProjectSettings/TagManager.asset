@@ -8,6 +8,8 @@ TagManager:
   - Flame
   - Water
   - Floor
+  - Torch
+  - Burning
   layers:
   - Default
   - TransparentFX

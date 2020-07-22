@@ -8,10 +8,21 @@ public class Torch : MonoBehaviour
 
     public CheckTorch cT;
     public BoxCollider boxCol;
-    public GameObject fire;
+    public TorchFlame tF;
+    public bool hitWithWater;
 
 
-    
+
+
+    private void Update()
+    {
+        if (hitWithWater) 
+        {
+            tF.startBurning = false;
+            tF.hitWithWater = true;
+            hitWithWater = false;
+        }
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -25,28 +36,32 @@ public class Torch : MonoBehaviour
             {
                 case 0:
                     cT.torch += 1;
-                    //changing the layer prevents torches from being lit twice 
+                    //changing the layer and prevents torches from being lit twice 
+                    this.gameObject.tag = "Burning";
                     this.gameObject.layer = 8;
                     //setting this active lights the flame turning on the fire
-                    fire.SetActive(true);
+                    tF.startBurning = true;
                     cT.onFire[0] = true;
                     break;
                 case 1:
                     cT.torch += 1;
+                    this.gameObject.tag = "Burning";
                     this.gameObject.layer = 8;
-                    fire.SetActive(true);
+                    tF.startBurning = true;
                     cT.onFire[1] = true;
                     break;
                 case 2:
                     cT.torch += 1;
+                    this.gameObject.tag = "Burning";
                     this.gameObject.layer = 8;
-                    fire.SetActive(true);
+                    tF.startBurning = true;
                     cT.onFire[2] = true;
                     break;
                 case 3:
                     cT.torch += 1;
+                    this.gameObject.tag = "Burning";
                     this.gameObject.layer = 8;
-                    fire.SetActive(true);
+                    tF.startBurning = true;
                     cT.onFire[3] = true;
                     break;
             }
@@ -63,30 +78,32 @@ public class Torch : MonoBehaviour
                     cT.torch -= 1;
                     //changing the layer prevents torches from being extinguished twice
                     this.gameObject.layer = 0;
-                    fire.SetActive(false);
+                    tF.startBurning = false;
                     cT.onFire[0] = false;
                     break;
                 case 2:
                     cT.torch -= 1;
                     this.gameObject.layer = 0;
-                    fire.SetActive(false);
+                    tF.startBurning = false;
                     cT.onFire[1] = false;
                     break;
                 case 3:
                     cT.torch -= 1;
                     this.gameObject.layer = 0;
-                    fire.SetActive(false);
+                    tF.startBurning = false;
                     cT.onFire[2] = false;
                     break;
                 case 4:
                     cT.torch -= 1;
                     this.gameObject.layer = 0;
-                    fire.SetActive(false);
+                    tF.startBurning = false;
                     cT.onFire[3] = false;
                     break;
             }
         }
 
     }
+
+  
 
 }
