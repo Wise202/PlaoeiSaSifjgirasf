@@ -6,6 +6,7 @@ using UnityEngine.iOS;
 public class Water : MonoBehaviour
 {
     public CastingScript1 cS1;
+    public string lol;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class Water : MonoBehaviour
     {
         transform.position = cS1.waterPartVector;
         transform.LookAt(cS1.gameObject.transform);
+        lol = cS1.hit.collider.tag;
     }
 
 

@@ -25,6 +25,9 @@ public class CastingScript1 : MonoBehaviour
 
     public CheckTorch cT;
 
+    public GameObject waterWand;
+    public GameObject fireWand;
+
     public Torch torch;
 
     [SerializeField]
@@ -65,7 +68,7 @@ public class CastingScript1 : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(1))
         {
-            Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation);
+            if (fireWand) { Instantiate(Fire, fireBallPoint.position, fireBallPoint.rotation); }   
             thrust = 0f;
         }
         if (Input.GetMouseButtonDown(0))
@@ -87,7 +90,8 @@ public class CastingScript1 : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(direction);
             waterLaunchPoint.transform.rotation = Quaternion.Lerp(waterLaunchPoint.transform.rotation, rotation, speed * Time.deltaTime);
 
-            RaycastVoid();
+
+            if (waterWand) { RaycastVoid(); }  
 
         }
         if (Input.GetMouseButtonUp(0))
@@ -141,7 +145,7 @@ public class CastingScript1 : MonoBehaviour
                 
                 
                 
-                    Debug.Log("burn");
+                    Debug.Log(hit.collider.tag);
 
                     torch = hit.collider.gameObject.GetComponent<Torch>();
                     switch (cT.torch)

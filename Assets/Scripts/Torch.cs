@@ -14,6 +14,7 @@ public class Torch : MonoBehaviour
 
 
 
+
     private void Update()
     {
         if (hitWithWater) 

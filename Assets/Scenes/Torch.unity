@@ -919,6 +919,12 @@ PrefabInstance:
       objectReference: {fileID: 240201453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5062c1509eb9d244c8610ff309199b04, type: 3}
+--- !u!1 &591034205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 365056814, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
+    type: 3}
+  m_PrefabInstance: {fileID: 1214573026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &624123847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1707587945, guid: 2e62f5703e5f8d2488a5e1bc8433be41,
@@ -1042,7 +1048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778030660
 GameObject:
@@ -1276,6 +1282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterWand
       objectReference: {fileID: 0}
+    - target: {fileID: 1166905582161888369, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2397246908836306493, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
         type: 3}
       propertyPath: cS1
@@ -1434,7 +1445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -11.45
       objectReference: {fileID: 0}
     - target: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1576,7 +1587,7 @@ PrefabInstance:
     - target: {fileID: 6395981698463448377, guid: 5062c1509eb9d244c8610ff309199b04,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6395981698463448377, guid: 5062c1509eb9d244c8610ff309199b04,
         type: 3}
@@ -1881,6 +1892,12 @@ PrefabInstance:
 --- !u!1 &1568191289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1164628151123421796, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1153836262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1627588396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1166905582161888369, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
     type: 3}
   m_PrefabInstance: {fileID: 1153836262}
   m_PrefabAsset: {fileID: 0}
@@ -2258,6 +2275,8 @@ MonoBehaviour:
   endRay: {fileID: 400280368}
   fB: {fileID: 0}
   cT: {fileID: 533995121}
+  waterWand: {fileID: 1627588396}
+  fireWand: {fileID: 591034205}
   torch: {fileID: 0}
   privateThrust: 90
   waterArcRotation: {x: 0, y: 0, z: 0}
