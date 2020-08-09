@@ -7,6 +7,7 @@ public class Level1Cont : MonoBehaviour
 
     public bool spin;
     public bool spinBack;
+    float hitFireCount = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,45 @@ public class Level1Cont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        OpenDoor();
     }
+
+
+    public Rigidbody ExitDoor;
+    float doorSpeed = 11f;
+    void OpenDoor() 
+    {
+        if (spin) 
+        {
+            ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+            hitFireCount -= Time.deltaTime;
+        }
+
+        if (hitFireCount <= 0) 
+        {
+            spinBack = true;
+            hitFireCount = 0.01f;
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Fireball(Clone)")
+        {
+            spin = true;
+            hitFireCount = 1;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Fireball(Clone)") 
+        {
+            spin = false;
+        }
+    }
+
+
+
 }

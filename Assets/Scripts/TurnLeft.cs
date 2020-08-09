@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class TurnLeft : MonoBehaviour
 {
-    float speed = 100.0f;
+    float speed = 50.0f;
     public Level1Cont l1C;
-    float speedBack = 1000.0f;
-    float backTimer = 0.2f;
+    float speedBack = 300.0f;
+    float backTimer = 1.8f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class TurnLeft : MonoBehaviour
         if (l1C.spin)
         {
             transform.Rotate(Vector3.left * speed * Time.deltaTime);
-            backTimer = 0.2f;
+            backTimer = 1f;
         }
         if (l1C.spinBack) 
         {

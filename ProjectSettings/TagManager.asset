@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Torch
   - Burning
+  - MoveAble
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Ground
   - Player
   - FireBall
-  - 
-  - 
+  - Wall Floor
+  - Door
   - 
   - 
   - 
