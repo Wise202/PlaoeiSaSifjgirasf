@@ -6,6 +6,8 @@ public class Level1Cont : MonoBehaviour
 {
 
     public bool spin;
+    public bool badBrazier;
+    public bool goodBrazier;
     public bool spinBack;
     float hitFireCount = 1;
     // Start is called before the first frame update
@@ -25,13 +27,18 @@ public class Level1Cont : MonoBehaviour
     float doorSpeed = 11f;
     void OpenDoor() 
     {
-        if (spin) 
+        if (spin && !goodBrazier ) 
         {
             ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             hitFireCount -= Time.deltaTime;
         }
 
-        if (hitFireCount <= 0) 
+        if (spin && goodBrazier)
+        {
+            ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+        }
+
+        if (hitFireCount <= 0 && badBrazier) 
         {
             spinBack = true;
             hitFireCount = 0.01f;
@@ -45,6 +52,14 @@ public class Level1Cont : MonoBehaviour
         {
             spin = true;
             hitFireCount = 1;
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "")
+        {
+            goodBrazier = true;
         }
     }
 

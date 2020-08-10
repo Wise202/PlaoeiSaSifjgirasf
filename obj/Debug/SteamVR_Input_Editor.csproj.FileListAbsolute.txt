@@ -117,7 +117,6 @@ C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\System.Xml.XmlDocument.d
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\System.Xml.XPath.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\System.Xml.XPath.XDocument.dll
-C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEditor.Android.Extensions.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEditor.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEditor.Graphs.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEditor.TestRunner.dll
@@ -139,7 +138,6 @@ C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.CrashReporti
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.DirectorModule.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.DSPGraphModule.dll
-C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.GameCenterModule.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.GridModule.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.HotReloadModule.dll
@@ -219,7 +217,6 @@ C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.CoreModule.x
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.CrashReportingModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.DSPGraphModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.DirectorModule.xml
-C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.GameCenterModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.GridModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.HotReloadModule.xml
@@ -264,7 +261,6 @@ C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.VehiclesModu
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.VideoModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.WindModule.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.XRModule.xml
-C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEditor.VR.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\nunit.framework.pdb
 C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\nunit.framework.xml
 C:\Users\swise3\Documents\GitHub\aVRatar\obj\Debug\SteamVR_Input_Editor.csprojAssemblyReference.cache
@@ -272,3 +268,13 @@ C:\Users\swise3\Documents\GitHub\aVRatar\obj\Debug\SteamVR_Input_Editor.csproj.C
 C:\Users\swise3\Documents\GitHub\aVRatar\obj\Debug\SteamVR_Input_Editor.csproj.CopyComplete
 C:\Users\swise3\Documents\GitHub\aVRatar\obj\Debug\SteamVR_Input_Editor.dll
 C:\Users\swise3\Documents\GitHub\aVRatar\obj\Debug\SteamVR_Input_Editor.pdb
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\SourceUnityLib.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.Editor.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.Game.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.SubsystemsModule.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Unity.CompilationPipeline.Common.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.Platform.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.EditorHelper.dll
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\UnityEngine.SubsystemsModule.xml
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.Platform.pdb
+C:\Users\swise3\Documents\GitHub\aVRatar\Temp\bin\Debug\Substance.EditorHelper.pdb
