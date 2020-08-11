@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Level1Cont : MonoBehaviour
 {
-
+    
     public bool spin;
     public bool badBrazier;
     public bool goodBrazier;
     public bool spinBack;
-    float hitFireCount = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public float hitFireCount = 1;
+    
     // Update is called once per frame
     void Update()
     {
@@ -25,23 +20,33 @@ public class Level1Cont : MonoBehaviour
 
     public Rigidbody ExitDoor;
     float doorSpeed = 11f;
+
     void OpenDoor() 
     {
+        //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
         if (spin && !goodBrazier ) 
         {
             ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             hitFireCount -= Time.deltaTime;
         }
-
+        //lifts the main door fully if the player has the good brazier in place
         if (spin && goodBrazier)
         {
             ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
         }
-
-        if (hitFireCount <= 0 && badBrazier) 
+        //stops adding force to the main door dropping it back down to its starting position
+        //if badBrazier is true the door lifts partway further but still not fully
+        if (hitFireCount <= 0) 
         {
             spinBack = true;
-            hitFireCount = 0.01f;
+            if (!badBrazier)
+            {
+                hitFireCount = 1f;
+            }
+            if(badBrazier) 
+            {
+                hitFireCount = 1.1f;
+            }
         }
 
     }
@@ -51,24 +56,33 @@ public class Level1Cont : MonoBehaviour
         if (other.gameObject.name == "Fireball(Clone)")
         {
             spin = true;
-            hitFireCount = 1;
+            
+        }
+        if (other.gameObject.name == "BadBrazier") 
+        {
+            hitFireCount = 1.1f;
         }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "")
+        if (other.gameObject.name == "GoodBrazier")
         {
             goodBrazier = true;
+        }
+        if (other.gameObject.name == "BadBrazier")
+        {
+            badBrazier = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Fireball(Clone)") 
+        if (other.gameObject.name == "BadBrazier") 
         {
-            spin = false;
+            badBrazier = false;
         }
+
     }
 
 
