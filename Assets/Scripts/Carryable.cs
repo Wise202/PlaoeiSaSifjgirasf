@@ -11,7 +11,10 @@ public class Carryable : MonoBehaviour
     public string pickedUp;
     public Rigidbody rb;
 
+    public CastingScript1 cS1;
+    public string hit;
     public PickupRaycast pUR;
+    public Transform player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,8 @@ public class Carryable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (grabbed) 
         {
             transform.position = followPoint.position;
@@ -53,6 +58,21 @@ public class Carryable : MonoBehaviour
             grabbed = false;
         }
 
+
+        if (Input.GetMouseButton(0)) 
+        {
+            hit = cS1.hit.transform.gameObject.name;
+            if (hit == gameObject.name) 
+            {
+                rb.AddRelativeForce(player.forward * 10f, ForceMode.Impulse);
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0)) 
+        {
+            hit = null;
+        }
+        
         
         
     }

@@ -5,29 +5,37 @@ using UnityEngine;
 public class Plate : MonoBehaviour
 {
     public Rigidbody rb;
-    float f = 10f;
+    public Rigidbody sideDoor;
+    float f = 1f;
+    float weight = 20f;
     private void OnCollisionStay(Collision collision)
     {
-        
-        nothingOn = false;
+        if (collision.gameObject.name == "PlateUp")
+        {
+
+            nothingOn = true;
+
+        }
+
+
         Debug.Log(collision.gameObject.name);
         
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        nothingOn = true;
+       
        
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        
-        nothingOn = false;
-        Debug.Log("lol");
+       
+        if (other.gameObject.name == "PlateDown") 
+        {
+            nothingOn = false;
+        }
     }
 
     public bool nothingOn;
@@ -35,11 +43,18 @@ public class Plate : MonoBehaviour
 
     private void Update()
     {
-        if (nothingOn)
+
+        rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
+
+        //if (!nothingOn) 
+        //{
+
+        //    sideDoor.AddRelativeForce(-transform.up * Time.deltaTime * weight, ForceMode.Impulse);
+        //}
+        if (nothingOn) 
         {
-            rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
-           
+
+            sideDoor.AddRelativeForce(transform.up * Time.deltaTime * weight, ForceMode.Impulse);
         }
-        
     }
 }

@@ -82,6 +82,10 @@ public class Level1Cont : MonoBehaviour
         {
             badBrazier = false;
         }
+        if (other.gameObject.name == "GoodBrazier") 
+        {
+            goodBrazier = false;
+        }
 
     }
 
