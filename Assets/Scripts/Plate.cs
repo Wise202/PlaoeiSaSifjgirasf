@@ -8,12 +8,14 @@ public class Plate : MonoBehaviour
     public Rigidbody sideDoor;
     float f = 1f;
     float weight = 20f;
+    public SideDoor sD;
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.name == "PlateUp")
         {
 
             nothingOn = true;
+            sD.l = true;
 
         }
 
@@ -24,17 +26,16 @@ public class Plate : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-       
-       
+
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-       
         if (other.gameObject.name == "PlateDown") 
         {
             nothingOn = false;
+            sD.l = true;
         }
     }
 
@@ -43,18 +44,6 @@ public class Plate : MonoBehaviour
 
     private void Update()
     {
-
         rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
-
-        //if (!nothingOn) 
-        //{
-
-        //    sideDoor.AddRelativeForce(-transform.up * Time.deltaTime * weight, ForceMode.Impulse);
-        //}
-        if (nothingOn) 
-        {
-
-            sideDoor.AddRelativeForce(transform.up * Time.deltaTime * weight, ForceMode.Impulse);
-        }
     }
 }
