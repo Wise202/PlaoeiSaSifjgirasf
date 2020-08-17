@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 365056819}
   - component: {fileID: 365056818}
   - component: {fileID: 365056817}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FireWand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707587945}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,13 +118,70 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707587944}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 3.7, y: 1.94, z: 12.5}
+  m_LocalRotation: {x: 0.70649326, y: 0.029449755, z: -0.029449755, w: -0.70649326}
+  m_LocalPosition: {x: 3.7000144, y: 1.9400171, z: 12.50005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 365056815}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 265.226, y: 89.99999, z: -90}
+--- !u!1 &1823421431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823421432}
+  - component: {fileID: 1823421433}
+  - component: {fileID: 1823421434}
+  m_Layer: 14
+  m_Name: Raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823421432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823421431}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000000024989, y: -0.187, z: 1.182}
+  m_LocalScale: {x: 0.072442, y: 0.072442, z: 0.072442}
+  m_Children: []
+  m_Father: {fileID: 4288335847994348}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823421433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823421431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95634dac458a83c4ca9ade5b266d6784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1823421434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823421431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.39}
+  m_Center: {x: 0, y: 0, z: -2.83}
 --- !u!1 &1129895495175522
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +246,7 @@ Transform:
   m_Children:
   - {fileID: 365056815}
   - {fileID: 4225885105968621540}
+  - {fileID: 1823421432}
   m_Father: {fileID: 4204582120663750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -473,10 +531,10 @@ MonoBehaviour:
   playerCanMove: 1
   walkByDefault: 1
   walkSpeed: 4
-  sprintKey: 304
+  sprintKey: 0
   sprintSpeed: 8
   jumpPower: 5
-  canJump: 1
+  canJump: 0
   canHoldJump: 0
   useStamina: 1
   staminaDepletionSpeed: 2
@@ -494,7 +552,7 @@ MonoBehaviour:
     gravityMultiplier: 1
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
-    maxSlopeAngle: 70
+    maxSlopeAngle: 55
     maxWallShear: 89
     maxStepHeight: 0.2
     curntGroundNormal: {x: 0, y: 0, z: 0}
@@ -586,6 +644,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4288335847994348}
     m_Modifications:
+    - target: {fileID: 31836481388973420, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 360771602092094057, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
         type: 3}
       propertyPath: m_IsActive
@@ -605,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166905582161888369, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2397246908836306493, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
         type: 3}
@@ -695,6 +763,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LaunchArc
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132743615381717191, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376913270153432427, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8929611343696348616, guid: f26e6c6d24dbcd24797c8b0e01add4d8,
         type: 3}
