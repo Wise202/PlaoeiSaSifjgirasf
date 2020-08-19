@@ -46,7 +46,7 @@ public class Carryable : MonoBehaviour
             {
                 grabbed = true;
                 rb.useGravity = false;
-                rb.freezeRotation = true;
+                //rb.freezeRotation = true;
 
             }
         }
@@ -54,7 +54,7 @@ public class Carryable : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E)) 
         {
             rb.useGravity = true;
-            rb.freezeRotation = false;
+            //rb.freezeRotation = false;
             grabbed = false;
         }
 
