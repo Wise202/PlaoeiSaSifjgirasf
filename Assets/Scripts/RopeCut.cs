@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RopeCut : MonoBehaviour
 {
-    public GameObject rope;
+   
     public Animator anim;
     public CastingScript1 cS1;
     public string hits;
@@ -18,18 +18,26 @@ public class RopeCut : MonoBehaviour
     void Update()
     {
         hits = cS1.hit.transform.gameObject.name;
-        if (hits == rope.name) 
+        if (hits == gameObject.name)
         {
             anim.enabled = true;
-            Destroy(rope);
+            Destroy(gameObject);
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.name == "Fireball(Clone)") 
+        Debug.Log("s");
+        if (other.gameObject.name == "Cube")
         {
             anim.enabled = true;
         }
+        if (other.gameObject.name == "Fireball(Clone)")
+        {
+            anim.enabled = true;
+            Destroy(gameObject);
+        }
     }
+
+   
 }
