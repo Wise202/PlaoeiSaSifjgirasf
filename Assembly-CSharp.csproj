@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PickupRaycast.cs" />
     <Compile Include="Assets\Scripts\Plate.cs" />
     <Compile Include="Assets\Scripts\PressurePlate.cs" />
+    <Compile Include="Assets\Scripts\RopeCut.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\SideDoor.cs" />
     <Compile Include="Assets\Scripts\StreamScript.cs" />
