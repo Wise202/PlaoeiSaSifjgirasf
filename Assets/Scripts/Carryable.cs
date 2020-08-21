@@ -8,6 +8,7 @@ public class Carryable : MonoBehaviour
     float speed = 100f;
     public Transform followPoint;
     public bool grabbed;
+    public bool beenGrabbed;
     public string pickedUp;
     public Rigidbody rb;
 
@@ -31,6 +32,7 @@ public class Carryable : MonoBehaviour
             transform.position = followPoint.position;
             gameObject.layer = 14;
             transform.rotation = Quaternion.identity;
+            
         }
 
         else 
@@ -40,22 +42,26 @@ public class Carryable : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E)) 
         {
+            
             pickedUp = pUR.hitPickUp.transform.gameObject.name;
          
             if (pickedUp == gameObject.name)
             {
                 grabbed = true;
                 rb.useGravity = false;
-                //rb.freezeRotation = true;
+                rb.freezeRotation = true;
 
             }
+            
+
         }
 
         if (Input.GetKeyUp(KeyCode.E)) 
         {
             rb.useGravity = true;
-            //rb.freezeRotation = false;
+            rb.freezeRotation = false;
             grabbed = false;
+            
         }
 
 
@@ -76,4 +82,6 @@ public class Carryable : MonoBehaviour
         
         
     }
+
+   
 }

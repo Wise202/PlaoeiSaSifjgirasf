@@ -18,7 +18,7 @@ public class Level1Cont : MonoBehaviour
     }
 
 
-    public Rigidbody ExitDoor;
+    public Rigidbody exitDoor;
     float doorSpeed = 11f;
 
     void OpenDoor() 
@@ -26,19 +26,22 @@ public class Level1Cont : MonoBehaviour
         //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
         if (spin && !goodBrazier ) 
         {
-            ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             hitFireCount -= Time.deltaTime;
+            exitDoor.useGravity = true;
         }
         //lifts the main door fully if the player has the good brazier in place
         if (spin && goodBrazier)
         {
-            ExitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+            exitDoor.useGravity = false;
         }
         //stops adding force to the main door dropping it back down to its starting position
         //if badBrazier is true the door lifts partway further but still not fully
         if (hitFireCount <= 0) 
         {
             spinBack = true;
+            exitDoor.useGravity = true;
             if (!badBrazier)
             {
                 hitFireCount = 1f;
