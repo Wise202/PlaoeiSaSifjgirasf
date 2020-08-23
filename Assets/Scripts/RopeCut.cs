@@ -27,11 +27,8 @@ public class RopeCut : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("s");
-        if (other.gameObject.name == "Cube")
-        {
-            anim.enabled = true;
-        }
+        
+        
         if (other.gameObject.name == "Fireball(Clone)")
         {
             anim.enabled = true;

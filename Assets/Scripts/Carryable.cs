@@ -40,7 +40,7 @@ public class Carryable : MonoBehaviour
             gameObject.layer = 0;
         }
 
-        if (Input.GetKey(KeyCode.E)) 
+        if (Input.GetKeyDown(KeyCode.E)) 
         {
             
             pickedUp = pUR.hitPickUp.transform.gameObject.name;
