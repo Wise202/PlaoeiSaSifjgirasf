@@ -6,30 +6,43 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     public Rigidbody rb;
+    public Rigidbody sideDoor;
     float f = 1f;
-    private void OnCollisionStay(Collision collision)
+
+
+
+    private void OnTriggerStay(Collider other)
     {
-        rb.useGravity = true;
-        Debug.Log(collision.gameObject.name);
+        if (other.gameObject.name == "Up")
+        {
+            nothingOn = true;
+        }
+        if (other.gameObject.name == "Down")
+        {
+            nothingOn = false;
+        }
+
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        nothingOn = true;
-        
-    }
-
-    
     private void OnTriggerEnter(Collider other)
     {
-        
+
     }
     bool nothingOn;
     private void Update()
     {
-        if (nothingOn) 
+        if (nothingOn)
         {
             rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
+            sideDoor.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
+
+            sideDoor.useGravity = false;
+
+        }
+        if (!nothingOn)
+        {
+            rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
+            sideDoor.useGravity = true;
         }
     }
 }
