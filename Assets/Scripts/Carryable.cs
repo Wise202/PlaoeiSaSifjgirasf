@@ -37,7 +37,7 @@ public class Carryable : MonoBehaviour
 
         else 
         {
-            gameObject.layer = 0;
+            gameObject.layer = 15;
         }
 
         if (Input.GetKeyDown(KeyCode.E)) 
@@ -65,7 +65,7 @@ public class Carryable : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButton(0) && !grabbed) 
         {
             hit = cS1.hit.transform.gameObject.name;
             if (hit == gameObject.name) 

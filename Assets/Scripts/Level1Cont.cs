@@ -9,7 +9,7 @@ public class Level1Cont : MonoBehaviour
     public bool badBrazier;
     public bool goodBrazier;
     public bool spinBack;
-    public float hitFireCount = 1;
+    float hitFireCount = 2.5f;
     
     // Update is called once per frame
     void Update()
@@ -19,14 +19,14 @@ public class Level1Cont : MonoBehaviour
 
 
     public Rigidbody exitDoor;
-    float doorSpeed = 3f;
+    float doorSpeed = 10f;
 
     void OpenDoor() 
     {
         //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
         if (spin && !goodBrazier ) 
         {
-            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime / 2, ForceMode.Impulse);
+            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             hitFireCount -= Time.deltaTime;
             exitDoor.useGravity = true;
         }
@@ -34,7 +34,7 @@ public class Level1Cont : MonoBehaviour
         if (spin && goodBrazier)
         {
             exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
-            exitDoor.useGravity = false;
+            exitDoor.useGravity = true;
         }
         //stops adding force to the main door dropping it back down to its starting position
         //if badBrazier is true the door lifts partway further but still not fully
@@ -44,11 +44,11 @@ public class Level1Cont : MonoBehaviour
             exitDoor.useGravity = true;
             if (!badBrazier)
             {
-                hitFireCount = 1f;
+                hitFireCount = 2f;
             }
             if(badBrazier) 
             {
-                hitFireCount = 1.1f;
+                hitFireCount = 2.5f;
             }
         }
 
@@ -63,7 +63,7 @@ public class Level1Cont : MonoBehaviour
         }
         if (other.gameObject.name == "BadBrazier") 
         {
-            hitFireCount = 1.1f;
+            hitFireCount = 2.5f;
         }
     }
 

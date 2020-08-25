@@ -34,7 +34,7 @@ public class PressurePlate : MonoBehaviour
         if (nothingOn)
         {
             rb.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
-            sideDoor.AddRelativeForce(transform.up * Time.deltaTime * f, ForceMode.Impulse);
+            sideDoor.AddRelativeForce(transform.up * Time.deltaTime * f * 5, ForceMode.Impulse);
 
             sideDoor.useGravity = false;
 
