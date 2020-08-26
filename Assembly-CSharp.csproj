@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CastingScript1.cs" />
     <Compile Include="Assets\Scripts\CheckTorch.cs" />
     <Compile Include="Assets\Scripts\Earth.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\Fan.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\Hanging.cs" />
