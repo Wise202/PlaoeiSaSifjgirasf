@@ -5,26 +5,20 @@ using UnityEngine.iOS;
 
 public class Water : MonoBehaviour
 {
-    public CastingScript1 cS1;
-    public string lol;
+    public GameObject gO;
+    public ValvuePipe vP;
 
-    private void Awake()
+
+    private void Update()
     {
-        
-
+        if (vP.water)
+        {
+            gO.SetActive(true);
+        }
+        if (!vP.water)
+        {
+            gO.SetActive(false);
+        }
     }
-
-    private void Start()
-    {
-
-    }
-
-    private void FixedUpdate()
-    {
-        transform.position = cS1.waterPartVector;
-        transform.LookAt(cS1.gameObject.transform);
-        lol = cS1.hit.collider.tag;
-    }
-
 
 }

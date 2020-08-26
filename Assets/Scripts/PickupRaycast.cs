@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class PickupRaycast : MonoBehaviour
 {
-
+    public bool hitPipe;
     public RaycastHit hitPickUp;
 
     private void Update()
@@ -21,9 +22,11 @@ public class PickupRaycast : MonoBehaviour
             Debug.DrawRay(transform.position, transform.forward, color);
             if (Physics.Raycast(transform.position, transform.forward, out hitPickUp, size)) 
             {
-                //Debug.Log(hitPickUp.transform.gameObject.name);
+
             }
         }
+
     }
+
 
 }

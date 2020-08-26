@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\Fan.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\Hanging.cs" />
+    <Compile Include="Assets\Scripts\HeadJoint.cs" />
+    <Compile Include="Assets\Scripts\Jug.cs" />
     <Compile Include="Assets\Scripts\LaunchRenderer.cs" />
     <Compile Include="Assets\Scripts\Level1Cont.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\ValvuePipe.cs" />
     <Compile Include="Assets\Scripts\Water.cs" />
     <Compile Include="Assets\Scripts\WaterCatcher.cs" />
+    <Compile Include="Assets\Scripts\WaterPart.cs" />
     <Compile Include="Assets\Scripts\WoodenPlanks.cs" />
     <Compile Include="Assets\Scripts\WorldObjects.cs" />
     <Compile Include="Assets\Scripts\buttonScript.cs" />

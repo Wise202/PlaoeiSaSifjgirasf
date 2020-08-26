@@ -8,6 +8,7 @@ public class RopeCut : MonoBehaviour
     public Animator anim;
     public CastingScript1 cS1;
     public string hits;
+    public Level1Cont l1C;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class RopeCut : MonoBehaviour
         if (hits == gameObject.name)
         {
             anim.enabled = true;
+            l1C.cutRope = true;
             Destroy(gameObject);
         }
     }

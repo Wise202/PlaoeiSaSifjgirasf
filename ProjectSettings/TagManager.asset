@@ -11,6 +11,9 @@ TagManager:
   - Torch
   - Burning
   - MoveAble
+  - NoWater
+  - Fluid
+  - Wood
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - Carried
   - MoveAble
   - DoorTop
-  - 
+  - waterPlane
   - 
   - 
   - 

@@ -8,7 +8,8 @@ public class WoodenPlanks : MonoBehaviour
     public Rigidbody rb;
     public CastingScript1 cS1;
     string hit;
-
+    public Carryable carry;
+    public WoodenPlanks wood;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,21 @@ public class WoodenPlanks : MonoBehaviour
         if (hit == gameObject.name) 
         {
             rb.constraints = RigidbodyConstraints.None;
-            Debug.Log("rip");
+            rb.AddRelativeForce(cS1.gameObject.transform.forward * 10f, ForceMode.Impulse);
+            carry.enabled = true;
+            wood.enabled = false;
         }
+
+      
             
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Fireball(Clone)") 
+        {
+            rb.constraints = RigidbodyConstraints.None;
+           
+        }
     }
 }

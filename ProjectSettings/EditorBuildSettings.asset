@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SceneChange.unity
-    guid: 02d56607d0247f144adca0b02c757ae4
-  - enabled: 1
-    path: Assets/Scenes/Torch.unity
-    guid: c030c5c6e0261ac4b90ea1af3aa3c2fe
+    path: Assets/Scenes/Lvl1Final.unity
+    guid: aed0a7f063d8fc14b9e96509b27f7bb3
   m_configObjects: {}

@@ -30,6 +30,7 @@ public class RopeCut2 : MonoBehaviour
         {
             anim.enabled = true;
             rb.useGravity = true;
+            rb.constraints = RigidbodyConstraints.None;
             cut = true;
             Destroy(topPart);
             Destroy(bottomPart[1]);
@@ -52,6 +53,7 @@ public class RopeCut2 : MonoBehaviour
         {
             anim.enabled = true;
             rb.useGravity = true;
+            rb.constraints = RigidbodyConstraints.None;
             cut = true;
             Destroy(topPart);
             Destroy(bottomPart[1]);
