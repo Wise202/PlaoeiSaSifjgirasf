@@ -285,9 +285,6 @@
     <Reference Include="SourceUnityLib">
       <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
     </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -646,12 +643,7 @@
       <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{5E5B876B-276C-8FEC-3B87-69370EFE91FB}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

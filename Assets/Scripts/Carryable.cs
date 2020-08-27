@@ -45,7 +45,7 @@ public class Carryable : MonoBehaviour
             
             pickedUp = pUR.hitPickUp.transform.gameObject.name;
          
-            if (pickedUp == gameObject.name)
+            if (pickedUp == this.gameObject.name)
             {
                 grabbed = true;
                 rb.useGravity = false;

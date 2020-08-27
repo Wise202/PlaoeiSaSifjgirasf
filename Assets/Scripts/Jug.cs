@@ -9,7 +9,7 @@ public class Jug : MonoBehaviour
     public bool isFilled;
 
     public Level1Cont l1C;
-    public Rigidbody waterPlane;
+    
 
     
 

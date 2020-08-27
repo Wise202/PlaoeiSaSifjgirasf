@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Carryable.cs" />
     <Compile Include="Assets\Scripts\CastingScript1.cs" />
     <Compile Include="Assets\Scripts\CheckTorch.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Earth.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\Fan.cs" />
@@ -92,15 +93,12 @@
     <Compile Include="Assets\Scripts\TorchFlame.cs" />
     <Compile Include="Assets\Scripts\TurnLeft.cs" />
     <Compile Include="Assets\Scripts\TurnRight.cs" />
-    <Compile Include="Assets\Scripts\VRTest.cs" />
-    <Compile Include="Assets\Scripts\VRTestController.cs" />
     <Compile Include="Assets\Scripts\ValvuePipe.cs" />
     <Compile Include="Assets\Scripts\Water.cs" />
     <Compile Include="Assets\Scripts\WaterCatcher.cs" />
     <Compile Include="Assets\Scripts\WaterPart.cs" />
     <Compile Include="Assets\Scripts\WoodenPlanks.cs" />
     <Compile Include="Assets\Scripts\WorldObjects.cs" />
-    <Compile Include="Assets\Scripts\buttonScript.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
     <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
     <None Include="Assets\FirstPersion AIO Pack\README.txt" />
@@ -292,9 +290,6 @@
     </Reference>
     <Reference Include="Substance.Game">
       <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
-    </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/samsa/OneDrive/Documents/GitHub/PlaoeiSaSifjgirasf/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -676,33 +671,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{69E0EBA0-BA13-707C-CAA3-526E11DE5D5D}</Project>
-      <Name>SteamVR_Actions</Name>
-    </ProjectReference>
     <ProjectReference Include="Substance.EditorHelper.csproj">
       <Project>{98F19B38-E89F-094B-A016-81491E6DF0FE}</Project>
       <Name>Substance.EditorHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{E9594A20-9A3B-F356-5B3E-F1BAF8ABEDB0}</Project>
-      <Name>SteamVR_Input_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{A865ADC2-C097-1426-5EC3-BBD72B5C2357}</Project>
-      <Name>SteamVR_Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{5E5B876B-276C-8FEC-3B87-69370EFE91FB}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
     <ProjectReference Include="Substance.Platform.csproj">
       <Project>{4ED503C8-9529-058E-581A-A8A85A7DDC6E}</Project>
       <Name>Substance.Platform</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{E44175C6-2D23-FEF1-7CA1-2DD2EB57D612}</Project>
-      <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,9 +16,7 @@ ScriptedImporter:
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://MetalChain\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2408295642\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://MetalChain\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -239,9 +237,7 @@ ScriptedImporter:
     graphDescIndex: 1
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://MossyWalls\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1308312725\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://MossyWalls\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -462,9 +458,7 @@ ScriptedImporter:
     graphDescIndex: 2
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Mossyfloor\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2109526130\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Mossyfloor\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -478,7 +472,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _DetailAlbedoMap
         texture: {instanceID: 0}
-        scale: {x: 1, y: 1}
+        scale: {x: 9, y: 9}
         offset: {x: 0, y: 0}
       - name: _DetailMask
         texture: {instanceID: 0}
@@ -490,12 +484,12 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _EmissionMap
         texture: {instanceID: 0}
-        scale: {x: 1, y: 1}
+        scale: {x: 10, y: 10}
         offset: {x: 0, y: 0}
       - name: _MainTex
         texture: {fileID: 1396317536869640090, guid: a1a70244c8b6d5a4885ba07c49adb99f,
           type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 10, y: 10}
         offset: {x: 0, y: 0}
       - name: _MetallicGlossMap
         texture: {fileID: 4484563863837707629, guid: a1a70244c8b6d5a4885ba07c49adb99f,
@@ -522,7 +516,7 @@ ScriptedImporter:
       - name: _DstBlend
         float: 0
       - name: _GlossMapScale
-        float: 1
+        float: 0.38
       - name: _Glossiness
         float: 0.5
       - name: _GlossyReflections
@@ -534,7 +528,7 @@ ScriptedImporter:
       - name: _OcclusionStrength
         float: 1
       - name: _Parallax
-        float: 0.02
+        float: 0.005
       - name: _SmoothnessTextureChannel
         float: 0
       - name: _SpecularHighlights
@@ -685,9 +679,7 @@ ScriptedImporter:
     graphDescIndex: 3
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://PotentialIce\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"259561065\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://PotentialIce\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -908,9 +900,7 @@ ScriptedImporter:
     graphDescIndex: 4
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://Re-EnforcedWood\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2373418620\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://Re-EnforcedWood\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -1131,9 +1121,7 @@ ScriptedImporter:
     graphDescIndex: 5
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://SpawnTiles\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"2150740350\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://SpawnTiles\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -1354,8 +1342,7 @@ ScriptedImporter:
     graphDescIndex: 6
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://WaterSurface\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"36679448\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://WaterSurface\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
@@ -1576,8 +1563,7 @@ ScriptedImporter:
     graphDescIndex: 7
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://WaterV2\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
-      uid=\"4219779735\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://WaterV2\" label=\"\" >\n </sbspreset>\n"
     shaderName: Standard
     materialProperties:
       shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 
@@ -23,7 +22,7 @@ public class CastingScript1 : MonoBehaviour
     //fB is used to set the fireball into its "off conditionals"
     public FireBall fB;
 
-    public CheckTorch cT;
+    //public CheckTorch cT;
 
     public GameObject waterWand;
     public GameObject fireWand;
@@ -138,56 +137,6 @@ public class CastingScript1 : MonoBehaviour
                 fB.hitWithWater = true;
             }
 
-            if (hit.collider.tag == "Burning") 
-            {
-             
-                
-                
-                
-                
-                    Debug.Log(hit.collider.tag);
-
-                    torch = hit.collider.gameObject.GetComponent<Torch>();
-                    switch (cT.torch)
-                    {
-                        case 1:
-                            cT.torch -= 1;
-                            //changing the layer prevents torches from being extinguishable twice
-                            torch.gameObject.tag = "Torch";
-                            torch.gameObject.layer = 0;
-                            torch.hitWithWater = true;
-                            cT.onFire[0] = false;
-                            break;
-                        case 2:
-                            cT.torch -= 1;
-                            torch.gameObject.tag = "Torch";
-                            torch.gameObject.layer = 0;
-                            torch.hitWithWater = true;
-                            cT.onFire[1] = false;
-                            break;
-                        case 3:
-                            cT.torch -= 1;
-                            torch.gameObject.tag = "Torch";
-                            torch.gameObject.layer = 0;
-                            torch.hitWithWater = true; 
-                            cT.onFire[2] = false;
-                            break;
-                        case 4:
-                            cT.torch -= 1;
-                            torch.gameObject.tag = "Torch";
-                            torch.gameObject.layer = 0;
-                            torch.hitWithWater = true;
-                            cT.onFire[3] = false;
-                            break;
-                    
-
-
-                    
-                }
-                
-            }
-
-           
         }
         else
         {
