@@ -32,6 +32,8 @@ public class Carryable : MonoBehaviour
             transform.position = followPoint.position;
             gameObject.layer = 14;
             transform.rotation = Quaternion.identity;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
             
         }
 

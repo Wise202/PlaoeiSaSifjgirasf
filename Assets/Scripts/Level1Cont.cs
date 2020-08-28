@@ -43,11 +43,11 @@ public class Level1Cont : MonoBehaviour
             fakeBrazier = true;
         }
 
-        if (fakeBrazier && spin)
+        if (woodCount <= 0) 
         {
-            SceneManager.LoadScene("Lvl1Final");
-            Debug.Log("changelvl");
+            fakeBrazier = false;
         }
+        
 
     }
 
@@ -61,14 +61,14 @@ public class Level1Cont : MonoBehaviour
 
         
         //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
-        if (spin && !goodBrazier ) 
+        if (spin && !goodBrazier && !fakeBrazier) 
         {
             exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             hitFireCount -= Time.deltaTime;
             exitDoor.useGravity = true;
         }
         //lifts the main door fully if the player has the good brazier in place
-        if (spin && goodBrazier)
+        if (spin && goodBrazier && !fakeBrazier)
         {
             exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
             exitDoor.useGravity = true;
