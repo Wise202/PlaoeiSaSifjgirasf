@@ -8,7 +8,7 @@ public class TurnLeft : MonoBehaviour
     float speed = 50.0f;
     public Level1Cont l1C;
     float speedBack = 300.0f;
-    float backTimer = 1.8f;
+    public float backTimer = 1.8f;
 
 
     // Start is called before the first frame update

@@ -7,6 +7,11 @@ public class Door : MonoBehaviour
 
     public Light pl;
     public float pIntensity;
+
+    public AudioSource door;
+    public AudioClip up;
+    public AudioClip down;
+
     public float intensity 
     {
         set 
@@ -58,6 +63,20 @@ public class Door : MonoBehaviour
         if (other.gameObject.name == "UpTag") 
         {
             doorUp = false;
+        }
+        if (other.gameObject.name == "DownTag") 
+        {
+            door.clip = down;
+            door.Play();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "UpTag") 
+        {
+            door.clip = up;
+            door.Play();
         }
     }
 

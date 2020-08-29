@@ -3,24 +3,35 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Carryable
     - CastingScript1
+    - Door
     - Exit
     - FireBall
     - FirstPersonAIO
     - Jug
     - LaunchRenderer
     - Level1Cont
+    - MainMenu
     - PickupRaycast
     - PressurePlate
     - RopeCut
     - RopeCut2
+    - TimeDelayAudio
     - TurnLeft
     - TurnRight
     - ValvuePipe
     - Water
     - WaterPart
     - WoodenPlanks
+    Substance.Editor.dll:
+    - Substance.Editor.InspectorMaterial
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -31,6 +42,13 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/Lvl1Final.unity:
     - Class: 1
@@ -74,41 +92,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11626}
+      Script: {instanceID: 11712}
     - Class: 114
-      Script: {instanceID: 11766}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11810}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 11902}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 12058}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 12132}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12358}
     - Class: 114
-      Script: {instanceID: 12606}
+      Script: {instanceID: 12526}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12596}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12928}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13104}
+      Script: {instanceID: 12998}
+    - Class: 114
+      Script: {instanceID: 13062}
+    - Class: 114
+      Script: {instanceID: 13192}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -128,6 +150,75 @@ ScriptsOnlyBuild:
     - Class: 199
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11578}
+    - Class: 114
+      Script: {instanceID: 11868}
+    - Class: 114
+      Script: {instanceID: 11992}
+    - Class: 114
+      Script: {instanceID: 12020}
+    - Class: 114
+      Script: {instanceID: 12430}
+    - Class: 114
+      Script: {instanceID: 12666}
+    - Class: 114
+      Script: {instanceID: 12680}
+    - Class: 114
+      Script: {instanceID: 12872}
+    - Class: 114
+      Script: {instanceID: 12940}
+    - Class: 114
+      Script: {instanceID: 13110}
+    - Class: 114
+      Script: {instanceID: 13330}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -324,6 +415,12 @@ ScriptsOnlyBuild:
     className: TurnLeft
   - hash:
       serializedVersion: 2
+      Hash: b11c902d7af9d14aaacbfbe43b43b3ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -414,6 +511,12 @@ ScriptsOnlyBuild:
     className: RopeCut
   - hash:
       serializedVersion: 2
+      Hash: 7f16fe7d3adf57777dd2d3d9c271d5a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeDelayAudio
+  - hash:
+      serializedVersion: 2
       Hash: ee25d9a77611f02ac728e76935f97034
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -498,13 +601,19 @@ ScriptsOnlyBuild:
     className: StreamScript
   - hash:
       serializedVersion: 2
+      Hash: edfcbd4c6540f2a6d0340171de375785
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Door
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 3157561854407775566568656869ccf0
+      Hash: ebf525005dcb094809f8688317013215
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CastingScript1
@@ -792,5 +901,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Lvl1Final.unity
   playerPath: C:/Users/samsa/Desktop/ElementaryBuild/ElementaryTest.exe

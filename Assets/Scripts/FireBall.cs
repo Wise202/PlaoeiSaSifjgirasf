@@ -10,6 +10,7 @@ public class FireBall : MonoBehaviour
     public Light light;
     public BoxCollider bCol;
 
+    public AudioSource aS;
     //this script is going to add force to the object and throw the fireball
     public Rigidbody rb;
     public float thrust = 10000f;
@@ -54,9 +55,10 @@ public class FireBall : MonoBehaviour
             fadeOutTimer -= Time.deltaTime;
 
         }
-        if (fadeOutTimer <= 1.5f) 
+        if (fadeOutTimer <= 2f) 
         {
             light.intensity -= Time.deltaTime;
+            aS.volume -= Time.deltaTime;
         }
         if (fadeOutTimer <= 0)
         {

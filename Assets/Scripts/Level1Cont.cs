@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Level1Cont : MonoBehaviour
 {
-    
+
     public bool spin;
     public bool badBrazier;
     public bool goodBrazier;
     public bool fakeBrazier;
     public bool spinBack;
-    float hitFireCount = 2.5f;
+    public float hitFireCount = 2.5f;
+    bool stopHitFireCount;
 
     public int woodCount;
+    public Animator anim;
 
 
     public Jug j;
@@ -24,7 +26,7 @@ public class Level1Cont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasWater && jugInPlace) 
+        if (hasWater && jugInPlace)
         {
             OpenDoor();
         }
@@ -33,28 +35,35 @@ public class Level1Cont : MonoBehaviour
         {
             hasWater = true;
         }
-        else 
+        else
         {
             hasWater = false;
         }
 
-        if (woodCount >= 1) 
+        if (woodCount >= 1)
         {
             fakeBrazier = true;
         }
 
-        if (woodCount <= 0) 
+        if (woodCount <= 0)
         {
             fakeBrazier = false;
         }
+
+        if ( !jugInPlace || !hasWater ) 
+        {
+            anim.SetBool("Open", false);
+
+        }
+        
         
 
     }
 
 
 
-    public Rigidbody exitDoor;
-    float doorSpeed = 10f;
+  
+    
 
     void OpenDoor() 
     {
@@ -63,22 +72,29 @@ public class Level1Cont : MonoBehaviour
         //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
         if (spin && !goodBrazier && !fakeBrazier) 
         {
-            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
+
+            anim.SetBool("Open", false);
             hitFireCount -= Time.deltaTime;
-            exitDoor.useGravity = true;
+           
         }
         //lifts the main door fully if the player has the good brazier in place
         if (spin && goodBrazier && !fakeBrazier)
         {
-            exitDoor.AddRelativeForce(transform.up * doorSpeed * Time.deltaTime, ForceMode.Impulse);
-            exitDoor.useGravity = true;
+            anim.SetBool("Open", true);
+            if (cutRope)
+            {
+                anim.SetBool("Open", false);
+
+                
+            }
         }
+        
         //stops adding force to the main door dropping it back down to its starting position
         //if badBrazier is true the door lifts partway further but still not fully
         if (hitFireCount <= 0) 
         {
             spinBack = true;
-            exitDoor.useGravity = true;
+            //exitDoor.useGravity = true;
             if (!badBrazier)
             {
                 hitFireCount = 2f;

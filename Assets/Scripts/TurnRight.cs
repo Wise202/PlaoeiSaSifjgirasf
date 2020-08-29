@@ -9,6 +9,8 @@ public class TurnRight : MonoBehaviour
     public Level1Cont l1C;
     float speedBack = 300.0f;
     float backTimer = 1.8f;
+
+    public Animation anim;
     // Start is called before the first frame update
     void Start()
     {

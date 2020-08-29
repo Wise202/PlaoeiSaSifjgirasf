@@ -45,6 +45,7 @@ public class TimeDelayAudio : MonoBehaviour
         }
 
         fakebraz();
+        WalkingSounds();
     }
 
     void fakebraz() 
@@ -68,8 +69,9 @@ public class TimeDelayAudio : MonoBehaviour
 
     }
 
-    float walkingSpeed;
-    int walkingCount;
+    public float walkingSpeed;
+    public int walkingCount;
+    bool walk;
 
 
     public AudioClip[] footsteps;
@@ -78,16 +80,113 @@ public class TimeDelayAudio : MonoBehaviour
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             walkingSpeed += Time.deltaTime;
-            if (walkingSpeed >= 0.5f) 
+            if (walkingSpeed >= 0.4f) 
             {
                 walkingCount++;
+                walk = true;
                 walkingSpeed = 0f;
             }
             switch (walkingCount) 
             {
                 case 1:
+
                     walkingSource.clip = footsteps[0];
-                    walkingSource.Play();
+                    if (walk) 
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 2:
+                    walkingSource.clip = footsteps[1];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 3:
+                    walkingSource.clip = footsteps[2];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 4:
+                    walkingSource.clip = footsteps[3];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 5:
+                    walkingSource.clip = footsteps[4];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 6:
+                    walkingSource.clip = footsteps[5];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 7:
+                    walkingSource.clip = footsteps[6];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 8:
+                    walkingSource.clip = footsteps[7];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 9:
+                    walkingSource.clip = footsteps[8];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 10:
+                    walkingSource.clip = footsteps[9];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 11:
+                    walkingSource.clip = footsteps[10];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 12:
+                    walkingSource.clip = footsteps[11];
+                    if (walk)
+                    {
+                        walkingSource.Play();
+                        walk = false;
+                    }
+                    break;
+                case 13:
+                    walkingCount = 1;
                     break;
 
                 default:
