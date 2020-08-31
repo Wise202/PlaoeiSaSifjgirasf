@@ -8,7 +8,12 @@ public class Level1Cont : MonoBehaviour
 
     public bool spin;
     public bool badBrazier;
+    public AudioClip badAud;
+    public AudioSource source;
+    bool badBrazAud;
     public bool goodBrazier;
+    public AudioClip gBrazAud;
+    int gBrazInt;
     public bool fakeBrazier;
     public bool spinBack;
     public float hitFireCount = 2.5f;
@@ -16,16 +21,23 @@ public class Level1Cont : MonoBehaviour
 
     public int woodCount;
     public Animator anim;
-
+    
 
     public Jug j;
     public bool hasWater;
+    public AudioClip noWater;
+    bool noWaterBool;
     public bool jugInPlace;
     public bool cutRope;
 
     // Update is called once per frame
     void Update()
     {
+        if (source.clip == badAud && !badBrazAud && !source.isPlaying) 
+        {
+            source.Play();
+            badBrazAud = true;
+        }
         if (hasWater && jugInPlace)
         {
             OpenDoor();
@@ -35,6 +47,7 @@ public class Level1Cont : MonoBehaviour
         {
             hasWater = true;
         }
+
         else
         {
             hasWater = false;
@@ -52,12 +65,27 @@ public class Level1Cont : MonoBehaviour
 
         if ( !jugInPlace || !hasWater ) 
         {
-            anim.SetBool("Open", false);
-
+            if (spin)
+            {
+                anim.SetBool("Open", false);
+                hitFireCount = -1f;
+            }
         }
-        
-        
+        if (hitFireCount <= 0)
+        {
+            spinBack = true;
+            //exitDoor.useGravity = true;
+            if (!badBrazier)
+            {
+                hitFireCount = 0.1f;
+            }
+            if (badBrazier)
+            {
+                hitFireCount = 0.5f;
+            }
+        }
 
+       
     }
 
 
@@ -67,7 +95,7 @@ public class Level1Cont : MonoBehaviour
 
     void OpenDoor() 
     {
-
+       
         
         //lifts the main door partway then triggers the reset of it if the player hasnt gotten the good brazier under the jug
         if (spin && !goodBrazier && !fakeBrazier) 
@@ -81,6 +109,13 @@ public class Level1Cont : MonoBehaviour
         if (spin && goodBrazier && !fakeBrazier)
         {
             anim.SetBool("Open", true);
+
+            if (gBrazInt == 0 && !source.isPlaying) 
+            {
+                source.clip = gBrazAud;
+                source.Play();
+                gBrazInt++;
+            }
             if (cutRope)
             {
                 anim.SetBool("Open", false);
@@ -88,22 +123,32 @@ public class Level1Cont : MonoBehaviour
                 
             }
         }
+
+        if (spin && badBrazier) 
+        {
+            source.clip = badAud;
+            anim.SetBool("badBraz", true);
+        }
+        if (!spin) 
+        {
+            anim.SetBool("badBraz", false);
+        }
         
         //stops adding force to the main door dropping it back down to its starting position
         //if badBrazier is true the door lifts partway further but still not fully
-        if (hitFireCount <= 0) 
-        {
-            spinBack = true;
-            //exitDoor.useGravity = true;
-            if (!badBrazier)
-            {
-                hitFireCount = 2f;
-            }
-            if(badBrazier) 
-            {
-                hitFireCount = 2.5f;
-            }
-        }
+        //if (hitFireCount <= 0) 
+        //{
+        //    spinBack = true;
+        //    //exitDoor.useGravity = true;
+        //    if (!badBrazier)
+        //    {
+        //        hitFireCount = 2f;
+        //    }
+        //    if(badBrazier) 
+        //    {
+        //        hitFireCount = 2.5f;
+        //    }
+        //}
 
     }
 
@@ -118,6 +163,14 @@ public class Level1Cont : MonoBehaviour
 
             
         }
+
+        if (other.gameObject.name == "Fireball(Clone)"  && !hasWater && !noWaterBool && !source.isPlaying) 
+        {
+            source.clip = noWater;
+            source.Play();
+            noWaterBool = true;
+        }
+
         if (other.gameObject.name == "BadBrazier") 
         {
             hitFireCount = 2.5f;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Exit : MonoBehaviour
     {
         if(other.gameObject.tag == "Player") 
         {
-            Application.Quit();
+            SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         }
     }
 }

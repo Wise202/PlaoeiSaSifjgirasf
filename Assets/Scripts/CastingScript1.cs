@@ -21,7 +21,9 @@ public class CastingScript1 : MonoBehaviour
     public GameObject endRay;
     //fB is used to set the fireball into its "off conditionals"
     public FireBall fB;
-
+    // Water audio
+    public AudioSource source;
+    public AudioClip clip;
     //public CheckTorch cT;
 
     public GameObject waterWand;
@@ -72,7 +74,7 @@ public class CastingScript1 : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-
+            source.Play();
             waterParticles[0].SetActive(true);
             waterParticles[1].SetActive(true);
             waterArcRotation = new Vector3(startRay.transform.eulerAngles.x, startRay.transform.eulerAngles.y, startRay.transform.eulerAngles.z);
@@ -95,6 +97,7 @@ public class CastingScript1 : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            source.Stop();
             waterLaunchPoint.transform.eulerAngles = waterArcRotation;
             thrust = 0f;
             waterParticles[0].SetActive(false);

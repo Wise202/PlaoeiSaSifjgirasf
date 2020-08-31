@@ -8,14 +8,24 @@ public class Jug : MonoBehaviour
     public float waterAmount;
     public bool isFilled;
 
-    public Level1Cont l1C;
-    
+    public Animator anim;
 
+    public Level1Cont l1C;
+
+    public AudioSource source;
     
 
     private void Start()
     {
     
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Fluid") 
+        {
+            source.Play();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -38,6 +48,11 @@ public class Jug : MonoBehaviour
         {
             l1C.jugInPlace = false;
         }
+
+        if (other.gameObject.tag == "Fluid")
+        {
+            source.Stop();
+        }
     }
 
     private void Update()
@@ -45,6 +60,7 @@ public class Jug : MonoBehaviour
         if (waterAmount >= 1f) 
         {
             isFilled = true;
+            anim.SetBool("Filled", true);
         }
 
         
@@ -53,16 +69,23 @@ public class Jug : MonoBehaviour
         {
             isFilled = false;
             waterAmount = 0f;
+            anim.SetBool("Filled", false);
+
         }
         if (transform.eulerAngles.y >= 10 || transform.eulerAngles.y <= -10)
         {
             isFilled = false;
             waterAmount = 0f;
+            anim.SetBool("Filled", false);
+
         }
+
         if (transform.eulerAngles.z >= 10 || transform.eulerAngles.z <= -10)
         {
             isFilled = false;
             waterAmount = 0f;
+            anim.SetBool("Filled", false);
+
         }
 
 

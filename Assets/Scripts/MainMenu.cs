@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject title;
     public GameObject credits;
+    public GameObject loadingScreen;
 
    
 
@@ -22,6 +23,8 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Cursor.lockState = CursorLockMode.None;
 
         if (!source.isPlaying)
         {
@@ -67,7 +70,11 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame() 
     {
-        SceneManager.LoadScene("Lvl1Final");
+        loadingScreen.SetActive(true);
+        source.Stop();
+        title.SetActive(false);
+
+        SceneManager.LoadSceneAsync("Intro");
     }
 
     public void LoadCredits() 

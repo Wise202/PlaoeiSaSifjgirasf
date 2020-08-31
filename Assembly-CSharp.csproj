@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\FirstPersion AIO Pack\DemoScene\MiscScripts\Doors.cs" />
     <Compile Include="Assets\FirstPersion AIO Pack\FirstPersonAIO\FirstPersonAIO.cs" />
+    <Compile Include="Assets\Scripts\AmbientSounds.cs" />
     <Compile Include="Assets\Scripts\Burnable.cs" />
     <Compile Include="Assets\Scripts\Carryable.cs" />
     <Compile Include="Assets\Scripts\CastingScript1.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\Hanging.cs" />
     <Compile Include="Assets\Scripts\HeadJoint.cs" />
+    <Compile Include="Assets\Scripts\IntroAudio.cs" />
     <Compile Include="Assets\Scripts\Jug.cs" />
     <Compile Include="Assets\Scripts\LaunchRenderer.cs" />
     <Compile Include="Assets\Scripts\Level1Cont.cs" />
