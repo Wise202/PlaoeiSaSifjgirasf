@@ -2576,7 +2576,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.6759999, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.24267045, b: 0.3584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3431,7 +3431,7 @@ MonoBehaviour:
   badBrazier: 0
   badAud: {fileID: 8300000, guid: 85e284be15c969640baf043bdd6e09b5, type: 3}
   source: {fileID: 452867306}
-  goodBrazier: 0
+  goodBrazier: 1
   gBrazAud: {fileID: 8300000, guid: 5ca703f034f86bd479971b91c3822c41, type: 3}
   fakeBrazier: 0
   spinBack: 0
@@ -10689,7 +10689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterAmount: 0
-  isFilled: 0
+  isFilled: 1
   anim: {fileID: 1305834823}
   l1C: {fileID: 445976693}
   source: {fileID: 1305834829}
@@ -11551,7 +11551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440625793
 Transform:
   m_ObjectHideFlags: 0
@@ -16166,7 +16166,7 @@ MonoBehaviour:
   pIntensity: 0
   door: {fileID: 2044623443}
   up: {fileID: 8300000, guid: 57b5cdd4422cdbd458b26d926ae6a7ad, type: 3}
-  down: {fileID: 8300000, guid: 1865a6ea9fd21134eacd184018bb7c2a, type: 3}
+  down: {fileID: 8300000, guid: a50a178a72e14ba4aa3a5090257a9290, type: 3}
   doorUp: 0
 --- !u!82 &2044623443
 AudioSource:

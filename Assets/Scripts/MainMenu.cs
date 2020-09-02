@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public AudioClip[] sceneAudio;
     public AudioSource source;
 
-    public float audioCountdown = 2f;
+ //   public float audioCountdown = 2f;
     public bool[] audioCheck;
 
     public GameObject title;
@@ -26,41 +26,41 @@ public class MainMenu : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
 
-        if (!source.isPlaying)
-        {
-            audioCountdown -= Time.deltaTime;
-        }
+        //if (!source.isPlaying)
+        //{
+        //    audioCountdown -= Time.deltaTime;
+        //}
 
 
 
-        if (!audioCheck[0] && audioCountdown <= 0)
-        {
-            source.clip = sceneAudio[1];
-            source.Play();
-            audioCountdown = 20f;
-            audioCheck[1] = true;
-            audioCheck[0] = true;
-        }
+        //if (!audioCheck[0] && audioCountdown <= 0)
+        //{
+        //    source.clip = sceneAudio[1];
+        //    source.Play();
+        //    audioCountdown = 20f;
+        //    audioCheck[1] = true;
+        //    audioCheck[0] = true;
+        //}
 
-        if (audioCheck[1] && audioCountdown <= 0)
-        {
-            source.clip = sceneAudio[2];
-            source.Play();
-            audioCountdown = 20f;
+        //if (audioCheck[1] && audioCountdown <= 0)
+        //{
+        //    source.clip = sceneAudio[2];
+        //    source.Play();
+        //    audioCountdown = 20f;
 
-            audioCheck[1] = false;
-            audioCheck[2] = true;
-        }
+        //    audioCheck[1] = false;
+        //    audioCheck[2] = true;
+        //}
 
-        if (audioCheck[2] && audioCountdown <= 0) 
-        {
-            source.clip = sceneAudio[0];
-            source.Play();
-            audioCountdown = 20f;
-            audioCheck[0] = false;
-            audioCheck[1] = false;
-            audioCheck[2] = false;
-        }
+        //if (audioCheck[2] && audioCountdown <= 0) 
+        //{
+        //    source.clip = sceneAudio[0];
+        //    source.Play();
+        //    audioCountdown = 20f;
+        //    audioCheck[0] = false;
+        //    audioCheck[1] = false;
+        //    audioCheck[2] = false;
+        //}
 
 
 
