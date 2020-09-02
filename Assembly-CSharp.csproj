@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Jug.cs" />
     <Compile Include="Assets\Scripts\LaunchRenderer.cs" />
     <Compile Include="Assets\Scripts\Level1Cont.cs" />
+    <Compile Include="Assets\Scripts\LoadingScreenLvl1.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PickupRaycast.cs" />
